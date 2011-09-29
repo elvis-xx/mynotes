@@ -30,11 +30,11 @@ gem 'jquery-rails'
 # gem 'ruby-debug'
 
 
-group :developmen do
+group :development do
 	gem 'rspec-rails'
 end
 
 group :test do
     gem 'rspec'
-    gem 'webrat'
+    gem 'spork'
 end

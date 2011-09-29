@@ -1,14 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>MyNotes</title>
-  <%= stylesheet_link_tag    "application" %>
+  <title><%= title %></title>
+  <%= stylesheet_link_tag "bootstrap", "application" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body style="padding-top: 40px">
+    <%= render 'layouts/header' %>
+    <div class="container">
+        <div class="content">
+            <%= yield %>
+        </div>
+    </div>
+    <%= render 'layouts/footer' %>
 
-<%= yield %>
 
 </body>
 </html>

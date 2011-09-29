@@ -1,4 +1,15 @@
 MyNotes::Application.routes.draw do
+  get "users/new"
+  
+  
+  match 'contact', :to => 'pages#contact'
+  # generates about_path => '/about'; about_url => 'http://localhost:3000/about'
+  match '/about', :to => 'pages#about'
+  match '/signup', :to => 'users#new'
+  
+  root :to => 'pages#home'
+  
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
