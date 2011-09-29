@@ -1,6 +1,5 @@
 MyNotes::Application.routes.draw do
-  get "users/new"
-  
+  resources :users
   
   match 'contact', :to => 'pages#contact'
   # generates about_path => '/about'; about_url => 'http://localhost:3000/about'
