@@ -7,8 +7,9 @@ gem 'sqlite3-ruby', :require => 'sqlite3'
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3'
-
 gem 'json'
+gem 'gravatar_image_tag'
+
 
 # Gems used only for assets and not required
 # in production environments by default.
