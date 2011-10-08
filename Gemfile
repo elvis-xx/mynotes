@@ -9,6 +9,7 @@ gem 'sqlite3-ruby', :require => 'sqlite3'
 gem 'sqlite3'
 gem 'json'
 gem 'gravatar_image_tag'
+gem 'formtastic'
 
 
 # Gems used only for assets and not required
