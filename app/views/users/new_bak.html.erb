@@ -1,7 +1,9 @@
 <h1>Sign up</h1>
 <%= semantic_form_for @user do |f| %>
-  <%= f.input :name, :error_class => 'custom-error-class' %>
-  <%= f.input :email %>
+  <%= f.inputs "基本信息" do %>
+    <%= f.input :name %>
+    <%= f.input :email %>
+  <% end %>
   <%= f.buttons do %>
        <%= f.commit_button %>
   <% end %>

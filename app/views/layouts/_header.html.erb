@@ -1,16 +1,23 @@
 <div class="topbar">
     <div class="fill">
         <div class="container">
-            <a href="#" class="brand">My Notes</a>
+            <a href="/" class="brand">My Notes</a>
             <ul class="nav">
                 <li class="active"><%= link_to "Home", '#' %></li>
                 <li><%= link_to "Contact", '#' %></li>
             </ul>
-            <form action="application_submit" accept-charset="utf-8" class="pull-right">
-                <input class="input-small" type="text" placeholder="Username">
-                <input class="input-small" type="password" placeholder="Password">
-                <button class="btn" type="submit">Sign in</button>
-            </form>
+            <% if signed_in? %>
+              <%= link_to "Sign out", signout_path, :method => :delete, :class => "pull-right" %>
+            <% else %>
+              <% link_to "Sign in", signin_path %>
+              <form action="application_submit" accept-charset="utf-8" class="pull-right">
+                  <input class="input-small" type="text" placeholder="Username">
+                  <input class="input-small" type="password" placeholder="Password">
+                  <button class="btn" type="submit">Sign in</button>
+              </form>
+            <% end %>
+            
+            
         </div>
     </div>
 </div>
