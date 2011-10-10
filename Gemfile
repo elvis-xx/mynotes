@@ -10,6 +10,7 @@ gem 'sqlite3'
 gem 'json'
 gem 'gravatar_image_tag'
 gem 'formtastic'
+gem 'will_paginate'
 
 
 # Gems used only for assets and not required
