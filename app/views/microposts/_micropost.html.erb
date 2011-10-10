@@ -1,0 +1,7 @@
+<div class="micropost">
+  <%= micropost.content %>
+  Posted <%= time_ago_in_words(micropost.created_at) %> ago.
+  <% if current_user?(micropost.user) %>
+    <%= link_to "delete", micropost, :method => :delete, :confirm => "You sure?", :title => micropost.content %>
+  <% end -%>
+</div>

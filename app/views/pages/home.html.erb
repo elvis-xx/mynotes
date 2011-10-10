@@ -1,6 +1,18 @@
-<div class="page-header">
-    <h1>Welcome to My Notes  <small>Remind yourslef and contact with your friends</small></h1>
-</div>
-<div class="row">
-    <%= link_to "Sign up now!", signup_path, :class => "btn" %>
-</div>
+<% if signed_in? %>
+  <div class="main">
+    <h1>What's up</h1>
+    <%= render 'shared/micropost_form' %>
+    <%= render 'shared/feed' %>
+  </div>
+  <div class="side-bar">
+    <%= render 'shared/user_info' %>
+  </div>
+  
+<% else %>
+  <div class="page-header">
+      <h1>Welcome to My Notes  <small>Remind yourslef and contact with your friends</small></h1>
+  </div>
+  <div class="row">
+      <%= link_to "Sign up now!", signup_path, :class => "btn" %>
+  </div>
+<% end -%>

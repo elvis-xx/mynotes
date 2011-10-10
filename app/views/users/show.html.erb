@@ -2,3 +2,14 @@
     <%= gravatar_for @user, :size => 50 %>
     <%= @user.name %>
 </h1>
+<div class="main">
+  <% unless @user.microposts.empty? %>
+    <%= render @microposts %>
+    <%= will_paginate @microposts %>
+  <% end -%>
+</div>
+<div class="side-bar">
+  <%= @user.name %>
+  <%= link_to user_path(@user), @user %>
+  <%= @user.microposts.count %>
+</div>

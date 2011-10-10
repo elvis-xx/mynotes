@@ -1,0 +1,10 @@
+<%= form_for @micropost do |f| -%>
+  <div class="clearfix">
+    <div class="input">
+        <%= f.text_area :content, :class => "xxlarge", :rows => 5 %>
+    </div>
+  </div>
+  <div class="actions">
+    <%= f.submit "Submit", :class => "btn primary" %>
+  </div>
+<% end -%>

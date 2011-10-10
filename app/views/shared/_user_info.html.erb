@@ -1,0 +1,5 @@
+<div class="user_info">
+  <%= gravatar_for current_user, :size => 30 %>
+  <%= current_user.name %>
+  <%= pluralize(current_user.microposts.count, "micropost") %>
+</div>

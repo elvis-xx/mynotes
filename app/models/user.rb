@@ -1,6 +1,7 @@
 class User < ActiveRecord::Base
   attr_accessor :password
   attr_accessible :name, :email, :password, :password_confirmation
+  
   validates_presence_of :name, :on => :create, :message => "can't be blank"
   validates_presence_of :email, :on => :create, :message => "can't be blank"
   validates_presence_of :password, :on => :create, :message => "can't be blank"
@@ -15,6 +16,8 @@ class User < ActiveRecord::Base
   
   before_save :encrypt_password
   
+  has_many :microposts, :dependent => :destroy
+  
   def has_password?(submitted_password)
     encrypted_password == encrypt(submitted_password)
   end
@@ -28,6 +31,10 @@ class User < ActiveRecord::Base
   def self.authenticate_with_salt(id, cookie_salt)
     user = find_by_id(id)
     (user && user.salt == cookie_salt) ? user : nil
+  end
+  
+  def feed
+     Micropost.where("user_id = ?", id)
   end
   
   private
