@@ -1,5 +1,10 @@
-<div class="user_info">
-  <%= gravatar_for current_user, :size => 30 %>
-  <%= current_user.name %>
+<div class="user-info">
+  <div class="user-info-profile clearfix">
+    <h2 class="user-info-profile-title">
+      <%= gravatar_image_tag current_user.email, :class => "user-info-profile-img", :width => 30 %>
+      <%= current_user.name %>
+    </h2>
+  </div>
+  
   <%= pluralize(current_user.microposts.count, "micropost") %>
 </div>

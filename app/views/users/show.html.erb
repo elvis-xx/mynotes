@@ -1,15 +1,22 @@
-<h1>
-    <%= gravatar_for @user, :size => 50 %>
+<div class="row">
+  <div class="span10">
+    <h1>
+        <%= gravatar_for @user, :size => 70 %>
+        <%= @user.name %>
+    </h1>
+    <div class="main">
+      <% unless @user.microposts.empty? %>
+        <%= render @microposts %>
+        <%= will_paginate @microposts %>
+      <% end -%>
+    </div>
+  </div>
+  <div class="span4">
+    <%= gravatar_for @user, :size => 30 %>
     <%= @user.name %>
-</h1>
-<div class="main">
-  <% unless @user.microposts.empty? %>
-    <%= render @microposts %>
-    <%= will_paginate @microposts %>
-  <% end -%>
+    <%= link_to user_path(@user), @user %>
+    <%= @user.microposts.count %>
+  </div>
 </div>
-<div class="side-bar">
-  <%= @user.name %>
-  <%= link_to user_path(@user), @user %>
-  <%= @user.microposts.count %>
-</div>
+
+

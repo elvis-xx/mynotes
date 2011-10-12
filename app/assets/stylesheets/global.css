@@ -1,0 +1,46 @@
+.clearfix{
+    display: inline-block;
+}
+
+
+
+.content{
+    padding-top: 20px;
+}
+
+.main{
+    padding-left: 20px;
+    padding-bottom: 50px;
+    border-right: 1px solid #e2e2e2;
+}
+
+.side-bar{
+    padding-top: 20px;
+}
+
+.user-info{
+    margin-bottom: 6px;
+}
+
+.user-info h2{
+    font-size: 16px;
+    font-weight: 300;
+    padding-bottom: 6px;
+}
+
+.user-info-profile{
+    width: 100%;
+}
+
+.user-info-profile-title{
+    padding: 8px 0 0 0;
+    height: 34px;
+    display: block;
+    float: left;
+}
+
+.user-info-profile-img{
+    vertical-align: middle;
+    margin-right: 4px;
+    
+}

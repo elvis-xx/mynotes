@@ -1,12 +1,15 @@
 <% if signed_in? %>
-  <div class="main">
-    <h1>What's up</h1>
-    <%= render 'shared/micropost_form' %>
-    <%= render 'shared/feed' %>
+  <div class="row">
+    <div class="main span10">
+      <h1>What's up</h1>
+      <%= render 'shared/micropost_form' %>
+      <%= render 'shared/feed' %>
+    </div>
+    <div class="side-bar span4">
+      <%= render 'shared/user_info' %>
+    </div>
   </div>
-  <div class="side-bar">
-    <%= render 'shared/user_info' %>
-  </div>
+  
   
 <% else %>
   <div class="page-header">
